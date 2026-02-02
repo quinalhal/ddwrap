@@ -25,7 +25,7 @@ Under the hood, DDWrap still runs `dd`. Nothing is hidden.
 
 ### DDWrap in Action
 
-![DDWrap writing an image with progress and ETA](ddwraper.png)
+![DDWrap writing an image with progress and ETA](ddwrapper.png)
 
 The screenshot above shows DDWrap actively writing an image to a USB device, with real-time progress output, percentage complete, and estimated time remaining.
 
